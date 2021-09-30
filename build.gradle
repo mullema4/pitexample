@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'info.solidsoft.pitest' version '1.7.0'
+}
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.spockframework:spock-spring:2.0-M5-groovy-3.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+pitest {
+    junit5PluginVersion = '0.14'
+    threads = 4
+    timestampedReports = false
+    targetClasses = ['dk.cngroup.pitest.*']
+}
