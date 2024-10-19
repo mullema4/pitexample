@@ -18,7 +18,7 @@ class NumbersSpec extends Specification {
         10     | true
         -1     | false
         -10    | false
-        // FIXME add boundary case (zero)
+        0      | true
     }
 
 }

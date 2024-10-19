@@ -16,8 +16,19 @@ class OperationsSpec extends Specification {
         operand1 | operand2 | result
         10       | 0        | 10
         -6       | 0        | -6
-        // FIXME improve range of test parameters (non-zero 2nd param)
+        1        | -8       | -7
+        0        | 10       | 10
     }
 
-    // FIXME test subtraction
+    def "Should return #result given #operand1 - #operand2"() {
+        expect:
+        operations.subtract(operand1, operand2) == result
+
+        where:
+        operand1 | operand2 | result
+        10       | 0        | 10
+        -6       | 0        | -6
+        1        | -8       | 9
+        0        | 10       | -10
+    }
 }
