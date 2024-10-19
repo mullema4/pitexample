@@ -16,8 +16,8 @@ class OperationsSpec extends Specification {
         operand1 | operand2 | result
         10       | 0        | 10
         -6       | 0        | -6
-        //FIXME improve range of test parameters (non-zero 2nd param)
+        // FIXME improve range of test parameters (non-zero 2nd param)
     }
 
-    //FIXME test subtraction
+    // FIXME test subtraction
 }

@@ -8,17 +8,17 @@ class NumbersSpec extends Specification {
     @Subject
     Numbers numbers = new Numbers()
 
-    def 'Should return #result given #number'() {
+    def 'Should evaluate #number as natural: #result '() {
         expect:
         numbers.isNatural(number) == result
 
         where:
         number | result
-        10  | true
-        50  | true
-        -10 | false
-        -50 | false
-        //FIXME add boundary case (zero)
+        1      | true
+        10     | true
+        -1     | false
+        -10    | false
+        // FIXME add boundary case (zero)
     }
 
 }
